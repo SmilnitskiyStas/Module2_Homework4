@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SafariPark.Models;
 
 namespace SafariPark
 {
@@ -11,9 +7,53 @@ namespace SafariPark
         public Starter()
         {
         }
-        public Run()
+
+        public void Run()
         {
-            
+            GenerationAnimal();
+        }
+
+        private void GenerationAnimal()
+        {
+            GenerationAnimal animal = new GenerationAnimal();
+
+            Animal[][] animals = animal.GenericAnimal();
+
+            SortAnimal(animals);
+        }
+
+        private void SortAnimal(Animal[][] animals)
+        {
+            for (int i = 0; i < animals.Length; i++)
+            {
+                if (animals[i] != null)
+                {
+                    Console.WriteLine($"\nYou show '{animals[i][0].SeparationOfAnimals.ToUpper()}'\n");
+
+                    Array.Sort(animals[i]);
+
+                    ShowInformations(animals[i]);
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        private void ShowInformations(Animal[] animals)
+        {
+            if (animals != null)
+            {
+                for (int y = 0; y < animals.Length; y++)
+                {
+                    Console.WriteLine($"Name: {animals[y].Name}, Groups of animals - {animals[y].SeparationOfAnimals}");
+                }
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

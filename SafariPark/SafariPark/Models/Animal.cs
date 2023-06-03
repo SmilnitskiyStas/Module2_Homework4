@@ -1,14 +1,8 @@
 ﻿using SafariPark.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SafariPark.Models
 {
-
-    internal abstract class Animal : IAnimals
+    internal abstract class Animal : IAnimals, IComparable
     {
         public string Name { get; set; }
 
@@ -16,11 +10,28 @@ namespace SafariPark.Models
 
         public string Color { get; set; }
 
-        protected Animal(string name, string separationOfAnimals, string color)
+        public int Age { get; set; }
+
+        public Animal() { }
+
+        protected Animal(string name, string separationOfAnimals, string color, int age)
         {
             Name = name;
             SeparationOfAnimals = separationOfAnimals;
             Color = color;
+            Age = age;
+        }
+
+        public int CompareTo(object? obj)
+        {
+            if (obj is Animal animal)
+            {
+                return Name.CompareTo(animal.Name);
+            }
+            else
+            {
+                throw new ArgumentException("Не правильний об'єкт");
+            }
         }
     }
 }

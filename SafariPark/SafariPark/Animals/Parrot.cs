@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SafariPark.Models;
 
 namespace SafariPark.Animals
 {
-    internal class Parrot
+    internal class Parrot : Bird
     {
+        public Parrot()
+        {
+        }
+
+        public Parrot(string name, string separationOfAnimals, string color, int age)
+            : base(name, separationOfAnimals, color, age)
+        {
+        }
     }
 }

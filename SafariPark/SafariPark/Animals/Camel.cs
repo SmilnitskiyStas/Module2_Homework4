@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SafariPark.Models;
 
 namespace SafariPark.Animals
 {
-    internal class Camel
+    internal class Camel : Mammals
     {
+        public Camel(string name, string separationOfAnimals, string color, int age)
+            : base(name, separationOfAnimals, color, age)
+        {
+        }
     }
 }

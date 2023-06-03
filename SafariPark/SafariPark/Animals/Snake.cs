@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SafariPark.Models;
 
 namespace SafariPark.Animals
 {
-    internal class Snake
+    internal class Snake : Reptile
     {
+        public Snake(string name, string separationOfAnimals, string color, int age)
+            : base(name, separationOfAnimals, color, age)
+        {
+        }
     }
 }

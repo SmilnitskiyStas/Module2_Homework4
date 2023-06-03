@@ -13,5 +13,7 @@ namespace SafariPark.Interface
         string SeparationOfAnimals { get; }
 
         string Color { get; }
+
+        int Age { get; }
     }
 }

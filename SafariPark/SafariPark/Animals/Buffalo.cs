@@ -1,16 +1,11 @@
 ﻿using SafariPark.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SafariPark.Animals
 {
-    internal class Buffalo : Animal
+    internal class Buffalo : Mammals
     {
-        public Buffalo(string name, string separationOfAnimals, string color) 
-            : base(name, separationOfAnimals, color)
+        public Buffalo(string name, string separationOfAnimals, string color, int age)
+            : base(name, separationOfAnimals, color, age)
         {
         }
     }
