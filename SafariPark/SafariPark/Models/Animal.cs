@@ -2,7 +2,7 @@
 
 namespace SafariPark.Models
 {
-    internal abstract class Animal : IAnimals, IComparable
+    internal class Animal : IAnimals, IComparable
     {
         public string Name { get; set; }
 

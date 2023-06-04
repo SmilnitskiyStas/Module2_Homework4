@@ -13,6 +13,10 @@ namespace SafariPark.Models
             Animals = new Animal[3][];
         }
 
+        /// <summary>
+        /// Генерація тварин.
+        /// </summary>
+        /// <returns>Повернення зубчастого масиву тварин.</returns>
         public Animal[][] GenericAnimal()
         {
             bool isWorking = true;
@@ -23,14 +27,14 @@ namespace SafariPark.Models
 
             while (isWorking)
             {
-                Console.WriteLine("Who you want to buy\n1. Reptiles\n2. Bird\n3. Mammals");
+                Console.WriteLine("Who would you like to see?\n1. Reptiles\n2. Bird\n3. Mammals");
 
                 int choice = int.Parse(Console.ReadLine()) - 1;
 
                 switch (choice)
                 {
                     case 0:
-                        Console.WriteLine("How you want to buy Reptiles:");
+                        Console.WriteLine("How many reptiles would you like to see?:");
                         int createReptiles = int.Parse(Console.ReadLine());
 
                         animals = new Animal[createReptiles];
@@ -46,7 +50,7 @@ namespace SafariPark.Models
 
                         break;
                     case 1:
-                        Console.WriteLine("How you want to buy Bird:");
+                        Console.WriteLine("How many bird would you like to see?:");
                         int createBird = int.Parse(Console.ReadLine());
 
                         animals = new Animal[createBird];
@@ -62,7 +66,7 @@ namespace SafariPark.Models
 
                         break;
                     case 2:
-                        Console.WriteLine("How you want to buy Mammals");
+                        Console.WriteLine("How many mammals would you like to see?");
                         int createMammals = int.Parse(Console.ReadLine());
 
                         animals = new Animal[createMammals];
@@ -85,6 +89,10 @@ namespace SafariPark.Models
             return Animals;
         }
 
+        /// <summary>
+        /// Запитуємо, чи будемо далі наповнювати масив тваринами.
+        /// </summary>
+        /// <returns>Boolean.</returns>
         private bool IsWorking()
         {
             Console.WriteLine("Do you want to buy more?\n1. Yes\n2. No");
@@ -104,6 +112,11 @@ namespace SafariPark.Models
         {
         }
 
+        /// <summary>
+        /// Створення рептилій.
+        /// </summary>
+        /// <param name="age">Вік для тварини.</param>
+        /// <returns>Об'єкт тварини.</returns>
         private Animal CreateReptiles(int age)
         {
             Random random = new Random();
@@ -132,6 +145,11 @@ namespace SafariPark.Models
             return reptile;
         }
 
+        /// <summary>
+        /// Створення птах.
+        /// </summary>
+        /// <param name="age">Вік для тварини.</param>
+        /// <returns>Об'єкт тварини.</returns>
         private Animal CreateBird(int age)
         {
             Random random = new Random();
@@ -154,6 +172,11 @@ namespace SafariPark.Models
             return bird;
         }
 
+        /// <summary>
+        /// Створення ссавців.
+        /// </summary>
+        /// <param name="age">Вік для тварини.</param>
+        /// <returns>Об'єкт тварини.</returns>
         private Animal CreateMammals(int age)
         {
             Random random = new Random();
