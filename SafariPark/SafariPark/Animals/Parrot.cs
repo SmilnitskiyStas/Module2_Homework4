@@ -4,10 +4,6 @@ namespace SafariPark.Animals
 {
     internal class Parrot : Bird
     {
-        public Parrot()
-        {
-        }
-
         public Parrot(string name, string separationOfAnimals, string color, int age)
             : base(name, separationOfAnimals, color, age)
         {

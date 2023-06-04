@@ -112,17 +112,17 @@ namespace SafariPark.Models
 
             int choice = random.Next(0, 3);
 
-            string animal = ((EnumReptiles)random.Next(0, 3)).ToString();
+            string animal = ((EnumReptiles)choice).ToString();
 
             string separationReptile = ((EnumSeparationAnimal)1).ToString();
 
             switch (choice)
             {
                 case 0:
-                    reptile = new Crocodile(animal, separationReptile, "Orange", age);
+                    reptile = new Crocodile(animal, separationReptile, "Green", age);
                     break;
                 case 1:
-                    reptile = new Lizard(animal, separationReptile, "Green", age);
+                    reptile = new Lizard(animal, separationReptile, "Dark Green", age);
                     break;
                 case 2:
                     reptile = new Snake(animal, separationReptile, "Green", age);
@@ -140,7 +140,7 @@ namespace SafariPark.Models
 
             int choice = random.Next(0, 1);
 
-            string animal = ((EnumBird)random.Next(0, 1)).ToString();
+            string animal = ((EnumBird)choice).ToString();
 
             string separationBird = ((EnumSeparationAnimal)2).ToString();
 
@@ -162,17 +162,17 @@ namespace SafariPark.Models
 
             int choice = random.Next(0, 6);
 
-            string animal = ((EnumMammals)random.Next(0, 6)).ToString();
+            string animal = ((EnumMammals)choice).ToString();
 
             string separationMammals = ((EnumSeparationAnimal)3).ToString();
 
             switch (choice)
             {
                 case 0:
-                    mammals = new Buffalo(animal, separationMammals, "Orange", age);
+                    mammals = new Buffalo(animal, separationMammals, "Brown", age);
                     break;
                 case 1:
-                    mammals = new Camel(animal, separationMammals, "Black", age);
+                    mammals = new Camel(animal, separationMammals, "Orange", age);
                     break;
                 case 2:
                     mammals = new Fox(animal, separationMammals, "Orange", age);

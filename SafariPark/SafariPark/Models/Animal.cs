@@ -12,7 +12,9 @@ namespace SafariPark.Models
 
         public int Age { get; set; }
 
-        public Animal() { }
+        public Animal()
+        {
+        }
 
         protected Animal(string name, string separationOfAnimals, string color, int age)
         {
