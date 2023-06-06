@@ -1,6 +1,5 @@
-﻿using SafariPark.Animals;
+﻿using SafariPark.Models.Animals;
 using SafariPark.Enum;
-using SafariPark.Interface;
 
 namespace SafariPark.Models
 {

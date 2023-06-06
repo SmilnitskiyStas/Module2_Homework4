@@ -1,6 +1,6 @@
 ﻿using SafariPark.Models;
 
-namespace SafariPark.Animals
+namespace SafariPark.Models.Animals
 {
     internal class Lion : Mammals
     {
